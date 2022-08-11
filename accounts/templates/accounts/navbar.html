@@ -1,4 +1,6 @@
 {% load static %}
+
+
 <style>
   .hello-msg{
     font-size: 18px;
@@ -21,6 +23,10 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'products' %}">Products</a>
       </li>
+      {% else %}
+       <li class="nav-item">
+        <a class="nav-link" href="{% url 'account' %}">Settings</a>
+      </li>
       {% endif %}
     </ul>
   </div>
@@ -29,3 +35,5 @@
   <span ><a  class="hello-msg" href="{% url 'logout' %}">Logout</a></span>
 
 </nav>
+
+
